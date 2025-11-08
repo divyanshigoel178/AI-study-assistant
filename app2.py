@@ -16,7 +16,7 @@ if not API_KEY:
     raise RuntimeError("GOOGLE_API_KEY not found. Create a .env file with your key.")
 
 genai.configure(api_key=API_KEY)
-MODEL_NAME = "gemini-1.5-flash"  # fast & free-tier friendly
+MODEL_NAME = "gemini-2.5-flash"  # fast & free-tier friendly
 
 st.set_page_config(page_title="AI Study Assistant", page_icon="📘", layout="wide")
 

@@ -1,4 +1,17 @@
-streamlit>=1.32.0
-python-dotenv>=1.0.1
-google-generativeai>=0.7.0
-pdfplumber>=0.11.0
+# streamlit>=1.32.0
+# python-dotenv>=1.0.1
+# google-generativeai>=0.7.0
+# pdfplumber>=0.11.0
+
+
+streamlit==1.51.0
+pdfplumber==0.11.7
+python-dotenv==1.2.1
+google-generativeai==0.8.5
+google-ai-generativelanguage==0.6.15
+google-api-python-client
+pydantic
+tqdm
+blinker
+protobuf
+...
