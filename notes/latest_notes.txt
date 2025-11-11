@@ -1,0 +1,650 @@
+Cloud Computing (BCS071/BCS713)
+Unit – 4 Resource Management & Security
+In Cloud
+
+Cloud Computing (BCS071/BCS713)
+🌐 Resource Management in Cloud
+In cloud, resources = CPU, memory, storage, bandwidth, applications.
+Resource management means distributing, controlling, and monitoring these resources so
+every user gets what they need without waste.
+Example: If 100 students use Google Drive at the same time, Google must manage its storage
+servers so that everyone gets smooth service.
+🔗 Inter-Cloud Resource Management
+• Inter-cloud = between multiple cloud providers.
+• Companies don’t always depend on just one cloud (like AWS). They may use AWS + Azure +
+Google Cloud together.
+• Inter-cloud resource management = managing and sharing resources across different cloud
+providers.
+👉 Example:
+Netflix uses AWS for storage + Google Cloud for analytics.
+They must manage resources across both to keep services running smoothly.
+
+Cloud Computing (BCS071/BCS713)
+❖ Why is it Needed? (Need for Inter-Cloud Resource Management)
+1. High Demand Handling 📈
+If one cloud runs out of resources, another cloud can provide them.
+2. Cost Optimization 💰
+Different clouds have different prices. Companies choose the cheapest option for a resource.
+3. Better Performance ⚡
+User gets service from the nearest cloud server for faster speed.
+4. Avoid Vendor Lock-in A
+Companies don’t depend only on one provider; they can switch easily.
+5. Business Continuity 🔄
+If AWS has downtime, resources from Azure or Google Cloud can be used → no service
+interruption.
+6. Flexibility & Scalability 📦
+Easy to increase/decrease resources using multiple clouds.
+
+Cloud Computing (BCS071/BCS713)
+Benefits of Inter-Cloud Resource Management ✅
+1. Reliability
+Even if one cloud fails, others keep the system running.
+2. Cost Savings
+Choose best price cloud provider at any time.
+3. Global Access
+Resources can be served from the nearest location worldwide.
+4. Improved Security
+Data can be divided across clouds (multi-cloud security).
+5. Efficient Resource Usage
+No wastage, resources are balanced across providers.
+🌟 Simple Analogy
+Think of Inter-cloud resource management like using multiple food delivery apps (Swiggy +
+Zomato + UberEats):
+Follow Us
+RRSIMT CLASSES WHATSAPP - 9795358008
+If Swiggy has no restaurant open, you can order from Zomato.
+
+Cloud Computing (BCS071/BCS713)
+☁️ Types of Inter-Cloud Resource Management
+There are 2 main types:
+1. 🌐 Federation Clouds
+In federation cloud, many cloud providers agree to work together.
+They share their resources (storage, computing, bandwidth) voluntarily.
+It’s like a teamwork of cloud providers.
+👉 Example:
+• Suppose Govt. of India has its own private cloud.
+• It can join with another state government’s cloud → so both can share resources (data,
+apps, storage).
+• Universities and research centers also use federated clouds to share computing power.
+✅ Key points of Federation Cloud:
+• Cloud providers cooperate.
+• Resources are openly exchanged.
+• Used by governments, NGOs, universities, private clouds.
+
+Cloud Computing (BCS071/BCS713)
+2. ☁️ Multi-Cloud
+In multi-cloud, one company or client uses many different clouds (AWS, Azure, Google Cloud,
+etc).
+But here, cloud providers do not cooperate with each other.
+The client (user) must manage resources between them.
+👉 Example:
+▪ Netflix uses AWS for video streaming + Google Cloud for analytics + Azure for AI.
+▪ But AWS and Google are not “working together”; Netflix itself manages resources.
+✅ Key points of Multi-Cloud:
+• Providers do not share resources voluntarily.
+• User (or their software tools) decides how to use different clouds.
+• Mix of public + private clouds often.
+• Popular for flexibility, backup, and cost savings.
+
+Cloud Computing (BCS071/BCS713)
+🌐 Topologies in Inter-Cloud Architecture(How Inter Cloud Arch. Works)
+There are 4 main types:
+1. Peer-to-Peer Inter-Cloud Federation
+• Clouds connect directly with each other.
+• They negotiate and share resources without any middleman.
+• Sometimes, they use a small directory/broker just to find other clouds, but most work is
+direct communication.
+👉 Example:
+Two universities (University A & University B) connect their
+private clouds directly to share computing resources for
+Auditor
+research.
+RESERVOIR Project is based on this.
+✅ Key Idea: Direct cloud-to-cloud friendship.
+
+Cloud Computing (BCS071/BCS713)
+2. 🏢 Centralized Inter-Cloud Federation
+• A central authority controls and manages resource sharing.
+• This central body keeps a registry (database) of available resources from all clouds.
+• When a cloud needs resources, it asks the central manager.
+👉 Example:
+Think of a job portal like Naukri.com. Companies (clouds) post jobs (resources), and students
+(clouds in need) apply through the central website.
+Projects like Dynamic Cloud Collaboration (DCC)
+and Federated Cloud Management use this.
+✅ Key Idea: One central manager coordinates
+everything.
+
+Cloud Computing (BCS071/BCS713)
+3. ☁️ Multi-Cloud Service
+• Here, a client uses a service that gives access to multiple clouds.
+• A broker service helps the client choose and manage resources from different clouds.
+👉 Example:
+A travel booking site (like MakeMyTrip) checks flights from IndiGo, Air India, Vistara at once
+→ you don’t go to each airline’s site.
+Similarly, a multi-cloud service helps you use AWS,
+Azure, and Google Cloud together.
+Examples: OPTIMUS, Contrail, MOSAIC, STRATOS.
+✅ Key Idea: A broker service helps clients connect
+to many clouds.
+
+Cloud Computing (BCS071/BCS713)
+4. 📚 Multi-Cloud Libraries
+Instead of using an external broker, the client builds its own broker using libraries (APIs).
+Libraries give a common way (standard API) to access different clouds.
+Developers write code once and use it with any cloud.
+👉 Example:
+If you are coding in Java/Python/Ruby, you can use
+special libraries like:
+• JClouds (Java)
+• Apache LibCloud (Python)
+• Apache DeltaCloud (Ruby)
+These libraries help you connect to AWS, Azure,
+Google Cloud in the same way.
+✅ Key Idea: Client uses APIs/libraries to make
+cloud usage simple and uniform.
+
+Cloud Computing (BCS071/BCS713)
+🌟 Super Simple Analogy
+❖ Peer-to-Peer → Like two friends sharing books directly ☎.
+❖ Centralized → Like a library 📚 where all books are registered, and you borrow through the
+librarian.
+❖ Multi-Cloud Service → Like a travel app 🛫 showing flights from many airlines.
+❖ Multi-Cloud Libraries → Like having a universal charger 🔌 that works with any phone
+brand.
+
+Cloud Computing (BCS071/BCS713)
+🌐 Resource Provisioning in Cloud :
+• Provisioning = assigning and managing resources (CPU, storage, memory, network, apps) to
+cloud users when they need it.
+• It’s like giving resources on demand.
+👉 Example:
+When you create a new Gmail account, Google provisions storage (15GB) for you.
+When you buy Netflix subscription, it provisions servers & bandwidth to stream videos for you.
+So provisioning = making resources ready and available.
+🛠Types of Resource Provisioning
+There are 3 main types:
+1. Static Provisioning
+2. Dynamic Provisioning
+3. Self service provisionig
+
+Cloud Computing (BCS071/BCS713)
+1. Static Provisioning
+• Resources are fixed and given in advance.
+• Even if the user does not use them fully, they cannot change.
+• No automatic scaling (increase/decrease).
+👉 Example:
+A company buys 5 servers permanently from a cloud provider. Even if it uses only 2 servers,
+it still pays for all 5.
+Like buying a fixed-size water tank 🚰 – whether you use it or not, it’s always there.
+✅ Good for: Workloads that are predictable and stable (e.g., small websites).
+2. ⚡ Dynamic Provisioning
+• Resources are allocated automatically based on demand.
+• If demand increases → more resources are added.
+• If demand decreases → resources are reduced.
+• This saves money and improves efficiency.
+
+Cloud Computing (BCS071/BCS713)
+👉 Example:
+Amazon shopping website adds extra servers on Black Friday sale and reduces them later.
+Like a water tap connected to a pipeline 🚰 – water (resources) increases or decreases as you
+need.
+✅ Good for: Workloads that change frequently (e.g., e-commerce sites, video streaming).
+3. Self-Service Provisioning
+• Users can create, manage, and delete resources themselves without asking the cloud
+provider.
+• A dashboard or portal is provided where users can choose what they need.
+👉 Example:
+On AWS or Azure, you can log in, choose a virtual machine, storage, or database, and create it
+instantly.
+Like online shopping 🛒 – you select what you want, pay, and it’s delivered immediately.
+Good for: Developers, companies, and anyone who wants full control and flexibility.
+
+Cloud Computing (BCS071/BCS713)
+🔑 Analogy to Remember
+✓ Static = Prepaid SIM card 📱 (you buy fixed data
+✓ in advance, whether you use or not).
+✓ Dynamic = Postpaid SIM card 📱 (you pay
+✓ according to how much you use).
+✓ Self-Service = Recharge app 💳 (you can
+✓ recharge or change plan anytime yourself).
+
+Cloud Computing (BCS071/BCS713)
+🌐 Demand-Driven vs Event-Driven Resource Provisioning
+Both are types of Dynamic Provisioning (where resources increase or decrease
+automatically).
+1. 📈 Demand-Driven Resource Provisioning
+• Resources are added or removed based on user demand (workload).
+• The system looks at how many users are active or how much load is on servers.
+• If demand increases → more resources are given.
+• If demand decreases → extra resources are removed.
+👉 Example:
+Amazon website adds more servers during Black Friday sales when many users visit.
+YouTube adds extra bandwidth when too many people watch videos at the same time.
+✅ Easy Analogy:
+Like a restaurant hiring extra chefs when more customers come, and letting them go
+when business is slow.
+
+Cloud Computing (BCS071/BCS713)
+2. ⚡ Event-Driven Resource Provisioning
+• Resources are added or removed based on specific events or triggers, not just demand.
+• An “event” can be: system error, sudden traffic spike, new user sign-up, scheduled job, or an
+attack.
+• System reacts immediately when the event occurs.
+👉 Example:
+A news website automatically adds servers when breaking news is published (event = news
+release).
+A company’s backup server turns on when main server crashes (event = failure).
+Auto-scaling triggers if CPU usage goes beyond 80% (event = CPU threshold crossed).
+✅ Easy Analogy:
+Like fire alarms 🚨 — they trigger instantly when smoke (event) is detected, and fire sprinklers
+turn on.
+
+Cloud Computing (BCS071/BCS713)
+❖ What is a Global Cloud Exchange?
+A Global Cloud Exchange is like a big market or stock-exchange — but for cloud resources
+(CPU, storage, bandwidth, special services).
+• Cloud providers offer spare resources.
+• Customers or other clouds buy/borrow those resources when they need them.
+• A central system (an exchange or brokers) helps find, match, negotiate and settle deals
+between providers and consumers.
+Analogy: imagine an electricity market where power plants sell extra power and shops buy it
+when demand is high. The cloud exchange does the same for computing power, storage, and
+network.
+
+Cloud Computing (BCS071/BCS713)
+❖ Why do we need a Global Cloud Exchange?
+1. Handle Peaks & Bursts – If your website suddenly gets millions of visitors, you can take
+extra capacity from the market immediately.
+2. Cost Optimization – Pick the cheapest provider for a specific time or region.
+3. Better Performance / Locality – Serve users from a nearby datacenter (lower latency).
+4. Failover & Resilience – If one cloud fails, others can take over quickly.
+5. Access to Specialized Services – Get a special GPU farm, or a region-specific service,
+without buying it yourself.
+6. Avoid Vendor Lock-in – You can move between providers easily because resources are
+traded.
+7. Global Resource Pooling – Small clouds or universities can share resources with others to
+run big jobs.
+
+Cloud Computing (BCS071/BCS713)
+🔁 How Global Cloud Exchange Works :
+1. Provider Registers Resources
+• Cloud providers (like AWS, Azure, Google Cloud, or smaller clouds) tell the exchange:
+• What resources they have (CPU, storage, servers, network).
+• Location (India, US, Europe).
+• Price and capacity.
+• SLA (Service Level Agreement = performance promises like 99.9% uptime).
+👉 Example: AWS says: “I have 100 servers available in Mumbai at $0.05/hour each, with
+99.9% uptime.”
+2. Consumer (or Broker) Requests Resources
+A company (consumer) or a broker (middleman) goes to the exchange and requests
+resources.
+They specify:
+• What they need (like 20 CPUs, 500GB storage).
+• How long (time window → 1 day, 1 week).
+
+Cloud Computing (BCS071/BCS713)
+• Quality of Service (QoS → like speed, latency).
+👉 Example: Flipkart asks: “I need 20 servers in India for 5 days with fast response under
+50ms.”
+3. Matchmaking (Finding the Best Provider)
+• The exchange compares consumer’s request with providers’ offers.
+• It finds the best match (correct location, price, speed, capacity).
+👉 Example: The exchange checks AWS, Azure, and Google, and finds AWS Mumbai fits
+Flipkart’s needs.
+4. SLA Negotiation (Agreement on Service Level)
+• Both sides agree on terms:
+• Uptime (99.9% or 99.99%).
+• Latency (how fast service responds).
+• Price and penalties if SLA breaks.
+👉 Example: Flipkart and AWS agree: “If uptime goes below 99.9%, AWS w ill give a refund.”
+
+Cloud Computing (BCS071/BCS713)
+5. Provisioning & Orchestration
+The resources are now allocated and set up for the consumer.
+Orchestration = connecting everything together (servers, storage, network).
+👉 Example: Flipkart’s new 20 servers are launched automatically and connected to their
+website system.
+6. Monitoring
+The exchange keeps checking whether the provider is following SLA (uptime, speed,
+availability).
+If something goes wrong → alerts are sent.
+👉 Example: Exchange monitors AWS servers to ensure Flipkart’s website stays online and
+fast.
+7. Billing & Settlement
+At the end, usage is measured (metering).
+Bills are created and payments are settled.
+👉 Example: Flipkart used 20 servers for 5 days = 20 × 24 × $0.05 = $24.
+
+Cloud Computing (BCS071/BCS713)
+🌟 Super Simple Analogy
+Think of it like Uber for Cloud 🚕:
+➢ Drivers (providers) register cars (resources).
+➢ Rider (consumer) requests a ride (resources).
+➢ Uber app (exchange) matches rider and driver.
+➢ They agree on fare (SLA negotiation).
+➢ Ride happens (provisioning).
+➢ Uber tracks the ride (monitoring).
+➢ At the end, payment is made (billing).
+
+Cloud Computing (BCS071/BCS713)
+⚠️ Challenges in Global Cloud Exchange
+1. Interoperability (Compatibility Issue)
+• Different clouds (AWS, Azure, Google) use different systems and APIs.
+• Hard to connect or move apps between them.
+👉 Example: An app built for AWS may not run easily on Azure.
+2. Security & Trust
+When you use another provider’s resources, you must trust them with your data.
+👉 Example: What if they don’t encrypt your files properly? Or misuse your data?
+3. Data Privacy & Laws
+Many countries have rules: data must stay inside the country.
+👉 Example: Indian user data may not be allowed to move to US servers.
+4. SLA (Service Level Agreement) Issues
+If provider promises 99.9% uptime but fails, who takes responsibility?
+👉 Example: If Flipkart’s site crashes, who pays — AWS or the exchange?
+
+Cloud Computing (BCS071/BCS713)
+☁️ Cloud Security Overview :
+Cloud security means protecting data, applications, and resources that are stored and used
+in the cloud.
+It makes sure:
+✅ Confidentiality – Only the right people can access the data.
+✅ Integrity – Data cannot be changed by attackers.
+✅ Availability – Cloud services must be available all the time (no downtime).
+👉 Example: Just like you lock your house with keys, CCTV, and security guard — in the cloud,
+we use encryption, firewalls, and monitoring.
+⚠️ Security Challenges in Cloud Computing :
+1. Data Breach (Data Theft)
+Hackers may steal sensitive data from cloud.
+👉 Example: Credit card info stolen from a shopping site’s cloud.
+
+Cloud Computing (BCS071/BCS713)
+2. Data Loss
+Data may get deleted accidentally or due to attack.
+👉 Example: A company loses customer records because backup failed.
+3. Account Hijacking
+If hackers steal login/password, they can control cloud resources.
+👉 Example: Hacker logs into AWS account and uses it to mine cryptocurrency.
+4. Insider Threats
+Employees of cloud provider or company misuse access.
+👉 Example: A staff member copies secret project files.
+5. Insecure APIs
+Cloud provides APIs (software interfaces). If APIs are weak, hackers can attack easily.
+👉 Example: Poorly protected API lets hacker access user database.
+6. Compliance & Legal Issues
+Different countries have different rules about data storage.
+👉 Example: EU’s GDPR law says data of Europeans must stay safe inside EU.
+
+Cloud Computing (BCS071/BCS713)
+7. Shared Technology Risks
+In cloud, many users share the same hardware. If isolation fails, data can leak.
+👉 Example: One company’s data becomes visible to another due to a bug.
+8. Denial of Service (DoS) Attacks
+Attackers overload the cloud system so it crashes.
+👉 Example: Flooding Flipkart’s website with fake traffic so real customers can’t shop.
+🔐 Security Governance in Cloud Computing
+Security Governance = A set of rules, policies, and controls that guide how security is managed
+in the cloud.
+👉 It ensures cloud services are safe, legal, and aligned with business goals.
+🛡Key Parts of Cloud Security Governance
+1. Policies & Rules
+Define what is allowed and what is not.
+👉 Example: “All data must be encrypted” or “Only managers can access financial reports.”
+
+Cloud Computing (BCS071/BCS713)
+2. Roles & Responsibilities
+Clear assignment of who manages what (cloud provider vs customer).
+👉 Example: Provider secures the hardware; customer secures passwords.
+3. Compliance & Regulations
+Follow laws (like GDPR, HIPAA, IT Act in India).
+👉 Example: A hospital must protect patient data according to medical laws.
+4. Risk Management
+Identify possible risks (data loss, hacking) and prepare solutions.
+👉 Example: Backup plans in case of server crash.
+5. Monitoring & Auditing
+Keep checking the system to make sure rules are followed.
+👉 Example: Regular security scans, log reviews, audits.
+6. Incident Response
+Define steps if something goes wrong (attack or data leak).
+👉 Example: If hacker attacks, system should lock accounts and notify admin.
+
+Cloud Computing (BCS071/BCS713)
+☁️ SaaS(Software as a service) Security :
+SaaS = Software delivered over the internet (like Gmail, Google Drive, Zoom, Dropbox).
+SaaS Security = Protecting data, users, and applications inside SaaS platforms from theft, loss,
+or misuse.
+👉 Example: Keeping your Google Drive safe from hackers or unauthorized users.
+🌟 Importance of SaaS Security
+1. Protects sensitive data
+👉 Example: A company’s financial reports on Google Drive must stay private.
+2. Ensures business continuity
+👉 If SaaS is attacked, business apps (like Zoom or Salesforce) can stop working.
+3. Compliance with laws
+👉 Companies must follow legal rules like GDPR (Europe) or HIPAA (healthcare).
+4. Builds trust
+👉 Customers feel safe when they know their data is secure.
+
+Cloud Computing (BCS071/BCS713)
+⚠️ Key Challenges in SaaS Security
+1. Data Breaches
+Hackers may steal company or personal data.
+👉 Example: Hackers stealing emails from Gmail.
+2. Account Hijacking
+Weak or stolen passwords let attackers take over accounts.
+👉 Example: Someone steals your Netflix account login.
+3. Insider Threats
+Employees (inside company or SaaS provider) may misuse access.
+👉 Example: A worker downloads confidential files without permission.
+4. Shadow IT
+Employees use SaaS apps without IT approval.
+👉 Example: Staff storing work files on personal Dropbox.
+5. Data Loss / Lack of Backup
+If SaaS fails or is deleted, data may be lost.
+
+Cloud Computing (BCS071/BCS713)
+👉 Example: Accidentally deleting important files from Google Docs.
+6. Compliance Issues
+SaaS data stored in other countries may break legal rules.
+👉 Example: A company storing Indian data on US servers against law.
+🛡SaaS Security Best Practices
+1. Strong Authentication
+Use Multi-Factor Authentication (MFA) → password + OTP or fingerprint.
+2. Data Encryption
+Encrypt data at rest (stored) and in transit (moving over internet).
+3. Access Control
+Give users only necessary access (least privilege).
+👉 Example: Interns can’t access financial records.
+4. Regular Monitoring & Auditing
+Track logins, unusual activity, and generate security reports.
+5. Backup & Recovery Plans
+
+Cloud Computing (BCS071/BCS713)
+Keep regular backups in case of accidental deletion or attack.
+6. Employee Training
+Teach employees to avoid phishing, weak passwords, and unsafe apps.
+7. Compliance Checks
+Ensure SaaS providers follow rules like GDPR, HIPAA, etc.
+☁️ What is Virtualized Security?
+Virtualized Security = Security designed for virtual environments (where many virtual
+machines run on the same physical server using a hypervisor).
+👉 In simple words:
+When one computer (server) is divided into many virtual machines (VMs), normal security
+tools (like firewalls, antivirus) may not work properly.
+So, virtualized security provides special protection for these VMs, hypervisors, and virtual
+networks.
+
+Cloud Computing (BCS071/BCS713)
+⚙️ How Virtualized Security Works?
+1. Monitors Virtual Machines (VMs): Keeps an eye on each VM to prevent attacks.
+2. Protects Hypervisor: Secures the software (hypervisor) that controls all VMs.
+3. Isolates Resources: Stops one VM from accessing or attacking another VM.
+4. Virtual Firewalls & IDS/IPS: Creates security tools inside the virtual environment (not only on
+physical hardware).
+👉 Example: Imagine one big apartment building 🏢 (server) with many flats (VMs). Virtualized
+security = CCTV, locks, and guards inside the building to keep each flat safe.
+🛡Types of Virtualization Security :
+1. Network Virtualization Security -
+• Protects virtual networks (software-based networks inside the cloud).
+• Uses virtual firewalls, VPNs, intrusion detection systems (IDS).
+👉 Example: Just like Wi-Fi password protects your home network, network virtualization
+security protects data moving between VMs.
+
+Cloud Computing (BCS071/BCS713)
+2. Storage Virtualization Security
+Protects data stored in virtualized storage systems (like SAN, cloud storage).
+Uses encryption, access control, backup.
+👉 Example: Like locking your cupboard (encryption) so only you can open it, even if it’s
+inside a shared room.
+3. Server Virtualization Security
+Protects virtual machines (VMs) running on a server.
+Uses antivirus, VM isolation, snapshots for recovery.
+👉 Example: If one flat in an apartment catches fire, walls (isolation) stop it from spreading to
+other flats.
+4. Application Virtualization Security
+• Protects apps running in a virtual environment.
+• Uses sandboxing (isolating apps), patching, access control.
+👉 Example: Running a risky app inside a “sandbox” so even if it has a virus, it cannot
+damage other apps.
+
+Cloud Computing (BCS071/BCS713)
+☁️ What is Cloud IAM?
+Cloud IAM (Identity and Access Management) = A system that controls who can access cloud
+resources, what they can do, and under what conditions.
+👉 Example: In Google Drive, you can decide:
+• Arman = can view only
+• Abhishek = can edit files
+• Admin = can add/remove users
+That’s Cloud IAM in action.
+
+Cloud Computing (BCS071/BCS713)
+🔑 Key Components of Cloud IAM
+1. Identities (Users & Groups)
+People or services using the cloud.
+👉 Example: Employee, Admin, Application.
+2. Authentication
+Verifying “Who are you?”.
+👉 Example: Logging in with password, OTP, or fingerprint.
+3. Authorization (Access Control)
+Deciding “What can you do?”.
+👉 Example: View file, edit file, delete file.
+4. Roles & Policies
+Define permissions clearly.
+👉 Example:
+Viewer = Read-only.
+Editor = Read + Write.
+
+Cloud Computing (BCS071/BCS713)
+Admin = Full control.
+5. Audit & Monitoring
+Track who accessed what and when.
+👉 Example: Log showing “Ali downloaded report at 5PM.”
+🌟 Benefits of Cloud IAM
+1. Stronger Security 🔐
+Prevents unauthorized access.
+2. Least Privilege 👤
+Users get only what they need, nothing extra.
+3. Compliance 📜
+Meets legal rules (like GDPR, HIPAA).
+4. Centralized Control 🖥
+One dashboard to manage access across all cloud services.
+5. Scalability 📈
+Easy to add/remove thousands of users in large companies.
+
+Cloud Computing (BCS071/BCS713)
+🛡Best Practices for Cloud IAM
+1. Use Multi-Factor Authentication (MFA)
+👉 Password + OTP = more security.
+2. Follow Least Privilege Principle
+👉 Give only minimum access required.
+3. Regularly Review Access
+👉 Remove access for employees who leave.
+4. Strong Password Policies
+👉 Force users to set strong, unique passwords.
+5. Role-Based Access Control (RBAC)
+👉 Assign roles (Admin, User, Viewer) instead of manual permissions.
+6. Enable Logging & Monitoring
+👉 Keep track of suspicious activity.
+7. Use Identity Federation
+👉 Allow login with trusted IDs (like Google, Microsoft).
+
+Cloud Computing (BCS071/BCS713)
+☁️ What is Cloud Security Standard?
+• Cloud Security Standards = Rules and guidelines made by international organizations to
+ensure cloud systems are safe, reliable, and compliant.
+👉 Example: Just like food safety standards (FSSAI, FDA) ensure food is safe to eat, cloud
+security standards ensure data in the cloud is safe to store and process.
+🌟 Why Cloud Security Standards are Needed?
+o To protect data from theft or loss.
+o To meet government regulations (laws).
+o To build trust between cloud providers and users.
+o To ensure all providers follow the same security practices.
+
+Cloud Computing (BCS071/BCS713)
+🔑 Common Cloud Security Standards (Easy)
+1. ISO/IEC 27001 & 27017 & 27018
+a) ISO/IEC 27001 → Standard for Information Security Management.
+👉 Example: Ensures cloud provider has strong security controls.
+b) ISO/IEC 27017 → Focuses on cloud-specific security guidelines.
+👉 Example: Rules for VM isolation, cloud firewalls.
+c) ISO/IEC 27018 → Protects personal data in cloud.
+👉 Example: Ensures user privacy in Google Drive/OneDrive.
+2. NIST (National Institute of Standards and Technology)
+US-based standard with a Cybersecurity Framework (CSF).
+Defines Identify, Protect, Detect, Respond, Recover steps.
+👉 Example: Cloud provider must have monitoring, backups, and recovery plans.
+3. CSA STAR (Cloud Security Alliance – Security Trust Assurance and Risk)
+A program that rates cloud providers’ security practices.
+👉 Example: Like a “security certificate” that shows AWS/Azure/Google fo llow best practices.
+
+Cloud Computing (BCS071/BCS713)
+4. PCI DSS (Payment Card Industry Data Security Standard)
+Standard for protecting payment and cardholder data in the cloud.
+👉 Example: PayPal or Stripe must follow PCI DSS to protect credit card numbers.
+5. HIPAA (Health Insurance Portability and Accountability Act)
+US standard for healthcare data security.
+👉 Example: Cloud apps storing hospital patient records must follow HIPAA.
+6. GDPR (General Data Protection Regulation – EU Law)
+Protects personal data of European citizens.
+👉 Example: A cloud provider must ask permission before storing your data and allow you to
+delete it (“Right to be Forgotten”).
+7. FedRAMP (Federal Risk and Authorization Management Program)
+US government cloud security standard.
+👉 Example: If a cloud provider wants to provide services to the US govt, it must be FedRAMP
+certified.
+
+Cloud Computing (BCS071/BCS713)
+🍯 What is a Honeypot?
+A honeypot is a fake system, server, or resource created to attract hackers and study their
+activities.
+👉 Example: Like putting a jar of honey 🍯 in the forest to attract bees — in cybersecurity,
+we put a fake target to attract hackers.
+It looks real but it’s actually a trap.
+🔑 Types of Honeypots
+1. Low-Interaction Honeypot
+Simulates only basic services (like fake login page, fake database).
+Easy to set up, less risky.
+👉 Example: A fake email server that just records login attempts.
+2. High-Interaction Honeypot
+A real system with operating system & applications, but isolated.
+Lets attackers spend more time → gives deep insights.
+👉 Example: A real Windows server left vulnerable to watch how hackers attack.
+
+Cloud Computing (BCS071/BCS713)
+3. Production Honeypot
+Placed inside real company network.
+Used mainly for detection and diversion (not for research).
+👉 Example: A fake database inside a bank’s cloud to distract hackers.
+4. Research Honeypot
+Used by security researchers to study hacker behavior.
+Collects data about attack patterns, tools, and malware.
+👉 Example: A university runs a fake network to learn about new viruses.
+5. Malware Honeypot
+Special honeypot designed to trap malware (viruses, worms, ransomware).
+👉 Example: A fake Android app store used to catch malware apps.
+6. Spam Honeypot
+Designed to trap spammers.
+Creates fake email accounts to collect spam messages.
+👉 Example: A system that records spammers sending junk mail.
+
+Cloud Computing (BCS071/BCS713)
+Thank You….
